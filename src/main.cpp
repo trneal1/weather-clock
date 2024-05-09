@@ -1,12 +1,12 @@
-#include <arduino.h>
+#include <Arduino.h>
 
-#include <esp8266Wifi.h>
+#include <ESP8266WiFi.h>
 #include <WiFiClient.h>
-#include <esp8266mDNS.h>
+//#include <esp8266mDNS.h>
 
-#include <WiFiUDP.h>
+#include <WiFiUdp.h>
 #include <NTPClient.h>
-#include <esp8266HTTPClient.h>
+#include <ESP8266HTTPClient.h>
 #include <WiFiClientSecureBearSSL.h>
 #include <ESP8266WebServer.h>
 
@@ -20,7 +20,7 @@
 #include <TaskScheduler.h>
 
 #include <SPI.h>
-#include <wire.h>
+#include <Wire.h>
 
 #include "Adafruit_HT1632.h"
 
@@ -39,8 +39,8 @@ String countryCode = "US";
 String LAT="";
 String LON="";
 String openWeatherMapApiKey = "af97131a6dddc89d7e21bd1c05ff0de1";
-String serverPath = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + countryCode + "&APPID=" + openWeatherMapApiKey + "&units=imperial";
-//String serverPath = "http://api.openweathermap.org/data/2.5/weather?lat=35.972440&lon=-78.471870&APPID=af97131a6dddc89d7e21bd1c05ff0de1&units=imperial";
+//String serverPath = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + countryCode + "&APPID=" + openWeatherMapApiKey + "&units=imperial";
+String serverPath = "http://api.openweathermap.org/data/2.5/weather?lat=35.972440&lon=-78.471870&APPID=af97131a6dddc89d7e21bd1c05ff0de1&units=imperial";
 
 String Local_URLs[4]={"http://esp_th_a.lan/temp", "http://esp_th_g.lan/temp","http://esp_th_u.lan/temp","http://esp_th_d.lan/temp"};
 
@@ -51,7 +51,7 @@ const char *password = "ripcord1";
 const char *hostname="ESP_CLOCK";
 
 WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP,"pool.ntp.org",-5*3600);
+NTPClient timeClient(ntpUDP,"pool.ntp.org",-4*3600);
 
 WiFiClient client;
 
