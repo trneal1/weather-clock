@@ -160,6 +160,8 @@ void updateDisplay(){
 
     min=timeClient.getMinutes();
     hour=timeClient.getHours();
+    if (hour>12)
+       hour=hour-12;
 
 /*
     matrix.setRotation(2);
