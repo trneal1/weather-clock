@@ -51,7 +51,7 @@ const char *password = "ripcord1";
 const char *hostname="ESP_CLOCK";
 
 WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP,"pool.ntp.org",-5*3600);
+NTPClient timeClient(ntpUDP,"pool.ntp.org",-4*3600);
 
 WiFiClient client;
 
